@@ -37,5 +37,9 @@ app.get("/devices", (req, res) => {
     runAdbCommand("devices", result => res.json(result));
 });
 
+app.get("/test" , (req , res) => {
+    return res.status(200).json({message: "API is working fine"})
+})
+
 const PORT = 3000;
 app.listen(PORT, () => console.log(`🚀 ADB service running on port ${PORT}`));
